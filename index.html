@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASCII Art Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>ASCII Art Generator</h1>
+        
+        <div class="controls">
+            <div class="input-group">
+                <label for="image-upload">Upload Image:</label>
+                <input type="file" id="image-upload" accept="image/*">
+            </div>
+            
+            <div class="input-group">
+                <label for="text-input">Or Enter Text:</label>
+                <input type="text" id="text-input" placeholder="Enter text to convert">
+            </div>
+            
+            <div class="input-group">
+                <label for="width">Width (characters):</label>
+                <input type="range" id="width" min="20" max="200" value="80">
+                <span id="width-value">80</span>
+            </div>
+            
+            <div class="input-group">
+                <label for="style">Style:</label>
+                <select id="style">
+                    <option value="simple">Simple</option>
+                    <option value="detailed">Detailed</option>
+                    <option value="blocks">Block Characters</option>
+                    <option value="inverted">Inverted</option>
+                    <option value="color">Color</option>
+                </select>
+            </div>
+            
+            <div class="input-group">
+                <label for="invert">Invert Colors:</label>
+                <input type="checkbox" id="invert">
+            </div>
+            
+            <button id="generate-btn">Generate ASCII Art</button>
+            <button id="copy-btn">Copy to Clipboard</button>
+            <button id="download-btn">Download as TXT</button>
+        </div>
+        
+        <div class="output-container">
+            <pre id="ascii-output">Your ASCII art will appear here...</pre>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
